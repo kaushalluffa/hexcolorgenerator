@@ -38,4 +38,49 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter-div{
+  width: 40rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  background-color: var(--light-blue);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+.counter-div>*{
+  margin-bottom: 2rem;
+
+}
+.count{
+  font-size: 4rem;
+
+}
+.buttons button{
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  margin: 0 1rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 700;
+}
+i{
+  margin-right: 5px;
+}
+button.subtract{
+  background-color: orangered;
+}
+button.reset{
+  background-color: white;
+  color: var(--black);
+}
+button.add{
+  background-color: green;
 }
