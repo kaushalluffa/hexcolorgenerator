@@ -1,31 +1,18 @@
-const count = document.querySelector(".count");
-const subtract = document.querySelector(".subtract");
-const reset = document.querySelector(".reset");
-const add = document.querySelector(".add");
-let c = 0;
-count.textContent = c;
-const subVal = () => {
-  c -= 1;
-  count.textContent = c;
-  if (c < 0) {
-    count.style.color = "red";
-  }
-};
-const resetVal = () => {
-  c = 0;
-  count.textContent = c;
-  if (c == 0) {
-    count.style.color = "white";
-  }
-};
-const addVal = () => {
-  c += 1;
-  count.textContent = c;
-  if (c > 0) {
-    count.style.color = "green";
-  }
-};
+const color = document.querySelector(".color");
 
-subtract.addEventListener("click", subVal);
-reset.addEventListener("click", resetVal);
-add.addEventListener("click", addVal);
+const generate = document.querySelector(".generate");
+const copy = document.querySelector(".copy");
+
+const genColor = () => {
+  const randomColor = Math.random().toString(16).substring(2, 8);
+  document.body.style.backgroundColor = "#" + randomColor;
+  color.textContent = `#${randomColor}`;
+
+  copy.innerHTML = `<i class="fas fa-clipboard"></i>Copy to clipboard`;
+};
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(color.textContent);
+  copy.innerHTML = `<i class="fas fa-check"></i>Copied to Clipboard`;
+};
+generate.addEventListener("click", genColor);
+copy.addEventListener("click", copyToClipboard);

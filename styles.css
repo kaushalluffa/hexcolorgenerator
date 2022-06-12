@@ -59,6 +59,9 @@ img {
 }
 .count{
   font-size: 4rem;
+  border: 1px solid white;
+  padding: 0 1rem;
+  margin-bottom: 5px;
 
 }
 .buttons button{
@@ -74,13 +77,8 @@ img {
 i{
   margin-right: 5px;
 }
-button.subtract{
-  background-color: orangered;
-}
+
 button.reset{
   background-color: white;
   color: var(--black);
-}
-button.add{
-  background-color: green;
 }
